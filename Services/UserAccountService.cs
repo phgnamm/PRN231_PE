@@ -12,6 +12,6 @@ namespace Services
     {
         UserAccountRepository repository = new();
 
-        public UserAccount Login(string email, string password) => repository.Login(email, password);
+        public UserAccount Login(string email, string password) => repository.Login(email, password.Trim());
     }
 }
