@@ -11,6 +11,6 @@ namespace Services
     public class StyleService
     {
         StyleRepository repository = new();
-        public List<Style> GetAll() => repository.GetAll();
+        public List<Style> GetAll() => repository.GetAll().ToList();
     }
 }
