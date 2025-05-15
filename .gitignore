@@ -1,0 +1,63 @@
+# Build files
+
+bin/
+obj/
+
+# User-specific files
+
+\*.user
+\*.rsuser
+\*.suo
+\*.userosscache
+\*.sln.docstates
+
+# Log files
+
+\*.log
+
+# Visual Studio Code directories
+
+.vscode/
+
+# Dependency directories
+
+packages/
+
+# Environment variables
+
+.env
+.env.\*
+
+# Local test databases
+
+\*.mdf
+\*.ldf
+
+# Rider project files
+
+.idea/
+\*.sln.iml
+
+# Resharper folders
+
+.ReSharper
+
+# Dotnet-specific
+
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Configuration files
+
+appsettings\*.json
+launchSettings.json
+
+# Temporary files
+
+\*.tmp
+\*.temp
+
+# Published files
+
+publish/

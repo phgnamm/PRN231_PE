@@ -1,0 +1,70 @@
+﻿@page
+@model PRN231PE_SP24_123890_DangPhuongNam_FE.Pages.Management.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>WatercolorsPainting</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="WatercolorsPainting.PaintingId" />
+            <div class="form-group">
+                <label asp-for="WatercolorsPainting.PaintingName" class="control-label"></label>
+                <input asp-for="WatercolorsPainting.PaintingName" class="form-control" />
+                <span asp-validation-for="WatercolorsPainting.PaintingName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WatercolorsPainting.PaintingDescription" class="control-label"></label>
+                <input asp-for="WatercolorsPainting.PaintingDescription" class="form-control" />
+                <span asp-validation-for="WatercolorsPainting.PaintingDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WatercolorsPainting.PaintingAuthor" class="control-label"></label>
+                <input asp-for="WatercolorsPainting.PaintingAuthor" class="form-control" />
+                <span asp-validation-for="WatercolorsPainting.PaintingAuthor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WatercolorsPainting.Price" class="control-label"></label>
+                <input asp-for="WatercolorsPainting.Price" class="form-control" />
+                <span asp-validation-for="WatercolorsPainting.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WatercolorsPainting.PublishYear" class="control-label"></label>
+                <input asp-for="WatercolorsPainting.PublishYear" class="form-control" />
+                <span asp-validation-for="WatercolorsPainting.PublishYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WatercolorsPainting.CreatedDate" class="control-label"></label>
+                <input asp-for="WatercolorsPainting.CreatedDate" class="form-control" />
+                <span asp-validation-for="WatercolorsPainting.CreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WatercolorsPainting.StyleId" class="control-label"></label>
+                <select asp-for="WatercolorsPainting.StyleId" class="form-control" asp-items="ViewBag.StyleId">
+                    @foreach (var club in Model.Style)
+                    {
+                        <option value=@club.StyleId>@club.StyleName</option>
+                    }
+                </select>
+                <span asp-validation-for="WatercolorsPainting.StyleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
